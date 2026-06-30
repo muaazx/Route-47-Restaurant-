@@ -1,0 +1,6 @@
+{
+  "name": "Route47",
+  "description": "Premium gourmet fast food restaurant in Pakistan inspired by highway diners, burgers, and neon vibes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

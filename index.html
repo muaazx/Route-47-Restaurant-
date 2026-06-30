@@ -1,0 +1,1146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Route47 | Premium Gourmet Fast Food & Road Trip Vibes</title>
+    
+    <!-- Tailwind CSS and custom fonts linked from source -->
+    <link rel="stylesheet" href="/src/index.css" />
+    
+    <!-- Lucide icons package loaded via official CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="bg-brand-bg text-brand-text font-sans antialiased overflow-x-hidden relative">
+
+    <!-- Ambient Glow Backgrounds (Immersive UI Theme) -->
+    <div class="fixed top-[-200px] right-[-200px] w-[600px] h-[600px] bg-brand-primary rounded-full blur-[180px] opacity-20 pointer-events-none z-0"></div>
+    <div class="fixed bottom-[-100px] left-[-100px] w-[400px] h-[400px] bg-brand-accent rounded-full blur-[150px] opacity-10 pointer-events-none z-0"></div>
+    <!-- Additional Ambient Glows for continuous immersion -->
+    <div class="fixed top-[40%] left-[80%] w-[500px] h-[500px] bg-brand-accent rounded-full blur-[200px] opacity-[0.08] pointer-events-none z-0"></div>
+    <div class="fixed top-[75%] left-[-200px] w-[600px] h-[600px] bg-brand-primary rounded-full blur-[180px] opacity-10 pointer-events-none z-0"></div>
+
+    <!-- 1. STICKY NAVIGATION -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 bg-black/40 backdrop-blur-md border-b border-white/5 h-[80px] flex items-center">
+      <div class="max-w-7xl mx-auto px-6 w-full flex items-center justify-between">
+        
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-2 group">
+          <span class="text-3xl md:text-4xl font-bebas tracking-tighter text-brand-primary glow-text-primary transition-transform duration-300 group-hover:scale-105">
+            🔥 ROUTE47
+          </span>
+        </a>
+
+        <!-- Desktop Menu Links -->
+        <div class="hidden lg:flex items-center gap-8 font-montserrat text-sm font-semibold tracking-wide text-brand-muted">
+          <a href="#hero" class="nav-link text-brand-primary transition-colors duration-300 hover:text-white">HOME</a>
+          <a href="#menu" class="nav-link text-brand-muted transition-colors duration-300 hover:text-white">MENU</a>
+          <a href="#deals" class="nav-link text-brand-muted transition-colors duration-300 hover:text-white">DEALS</a>
+          <a href="#about" class="nav-link text-brand-muted transition-colors duration-300 hover:text-white">ABOUT</a>
+          <a href="#gallery" class="nav-link text-brand-muted transition-colors duration-300 hover:text-white">GALLERY</a>
+          <a href="#contact" class="nav-link text-brand-muted transition-colors duration-300 hover:text-white">CONTACT</a>
+        </div>
+
+        <!-- Navigation Actions (Cart & Order Now) -->
+        <div class="hidden sm:flex items-center gap-4">
+          <!-- Cart Button -->
+          <button id="cart-btn" class="relative w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 hover:border-brand-primary group cursor-pointer">
+            <i data-lucide="shopping-bag" class="text-brand-text group-hover:text-brand-primary transition-colors" style="width: 20px; height: 20px;"></i>
+            <span class="cart-count-badge absolute -top-1 -right-1 bg-brand-primary text-white text-xs font-montserrat font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-lg border border-brand-bg hidden">0</span>
+          </button>
+
+          <!-- Order Now Button -->
+          <a href="#menu" class="hero-order-btn bg-brand-primary hover:bg-brand-accent text-white font-montserrat font-bold text-sm shadow-[0_0_20px_rgba(255,77,45,0.4)] hover:shadow-[0_0_30px_rgba(255,77,45,0.6)] px-8 py-3 rounded-full transition-all duration-300 uppercase tracking-widest">
+            Order Now
+          </a>
+        </div>
+
+        <!-- Mobile Header Actions -->
+        <div class="flex items-center gap-3 lg:hidden">
+          <!-- Mobile Cart Button -->
+          <button id="cart-btn-mobile" class="relative w-10 h-10 rounded-full bg-brand-card/80 border border-brand-border flex items-center justify-center cursor-pointer">
+            <i data-lucide="shopping-bag" class="text-brand-text" style="width: 18px; height: 18px;"></i>
+            <span class="cart-count-badge absolute -top-1 -right-1 bg-brand-primary text-white text-[10px] font-montserrat font-bold w-4 h-4 rounded-full flex items-center justify-center hidden">0</span>
+          </button>
+
+          <!-- Hamburger Button -->
+          <button id="hamburger-btn" class="w-10 h-10 bg-brand-card border border-brand-border rounded-full flex flex-col justify-center items-center gap-1.5 focus:outline-none cursor-pointer">
+            <span class="w-5 h-0.5 bg-brand-text transition-all duration-300 origin-center"></span>
+            <span class="w-5 h-0.5 bg-brand-text transition-all duration-300"></span>
+            <span class="w-5 h-0.5 bg-brand-text transition-all duration-300 origin-center"></span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden absolute top-full left-0 w-full glass p-6 flex-col gap-5 border-t border-brand-border font-montserrat text-sm font-bold uppercase tracking-wider text-center py-8 max-h-[calc(100vh-80px)] overflow-y-auto">
+        <a href="#hero" class="mobile-nav-link text-brand-primary py-2 hover:text-brand-primary">Home</a>
+        <a href="#menu" class="mobile-nav-link text-brand-text py-2 hover:text-brand-primary">Menu</a>
+        <a href="#deals" class="mobile-nav-link text-brand-text py-2 hover:text-brand-primary">Deals</a>
+        <a href="#about" class="mobile-nav-link text-brand-text py-2 hover:text-brand-primary">About</a>
+        <a href="#gallery" class="mobile-nav-link text-brand-text py-2 hover:text-brand-primary">Gallery</a>
+        <a href="#contact" class="mobile-nav-link text-brand-text py-2 hover:text-brand-primary">Contact</a>
+        <a href="#menu" class="hero-order-btn bg-brand-primary text-white py-3 px-8 rounded-full shadow-lg mt-2 glow-primary text-xs">
+          Order Online
+        </a>
+      </div>
+    </nav>
+
+
+    <!-- 2. HERO SECTION -->
+    <header id="hero" class="relative min-h-screen flex items-center pt-28 overflow-hidden">
+      <!-- Background Graphic Overlay -->
+      <div class="absolute inset-0 z-0">
+        <!-- Main premium highway street visual background -->
+        <div class="w-full h-full bg-cover bg-center opacity-30 scale-105" style="background-image: url('https://images.unsplash.com/photo-1549611016-3a70d82b5040?q=80&w=1600&auto=format&fit=crop');"></div>
+        <!-- Absolute dark vignette -->
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0B0B0B]/80 to-[#0B0B0B]"></div>
+        <div class="absolute inset-0 bg-radial-gradient from-transparent via-transparent to-[#0B0B0B]/90"></div>
+      </div>
+
+      <!-- Particle Canvas -->
+      <canvas id="particles-canvas"></canvas>
+
+      <!-- Content Container -->
+      <div class="relative z-10 max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-12 gap-12 items-center py-12">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 flex flex-col items-start text-left reveal-on-scroll active">
+          <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-3.5 py-1.5 mb-6">
+            <span class="w-2 h-2 bg-brand-secondary rounded-full animate-pulse"></span>
+            <span class="font-montserrat text-[10px] font-bold tracking-[0.2em] text-brand-secondary uppercase">
+              PAKISTAN'S PREMIUM SMASH BURGER DESTINATION
+            </span>
+          </div>
+          
+          <h1 class="font-bebas tracking-tighter text-5xl sm:text-7xl md:text-8xl lg:text-[90px] text-white leading-[0.85] uppercase mb-6">
+            THE JOURNEY TO <br>
+            <span class="text-stroke-immersive">GREAT TASTE</span> <br>
+            STARTS HERE.
+          </h1>
+
+          <p class="font-montserrat text-xs sm:text-sm md:text-base font-semibold tracking-widest text-brand-secondary uppercase mb-6 flex flex-wrap gap-2 items-center">
+            <span>Premium Burgers</span>
+            <span class="text-brand-primary">•</span>
+            <span>Loaded Fries</span>
+            <span class="text-brand-primary">•</span>
+            <span>Signature Wraps</span>
+            <span class="text-brand-primary">•</span>
+            <span>Fast Delivery</span>
+          </p>
+
+          <p class="font-sans text-brand-muted text-sm sm:text-base font-light leading-relaxed max-w-lg mb-8">
+            Experience premium hand-pressed gourmet patties, signature house sauces, and crispy golden double-fried loaded fries inspired by retro highway road trips. Every Bite is Worth the Journey.
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+            <a href="#menu" class="hero-order-btn bg-brand-primary hover:bg-brand-accent text-white font-montserrat font-bold text-sm tracking-wider uppercase px-10 py-4.5 rounded-full text-center shadow-[0_0_20px_rgba(255,77,45,0.4)] hover:shadow-[0_0_30px_rgba(255,77,45,0.6)] transition-all duration-300">
+              Order Online
+            </a>
+            <a href="#menu" class="border border-white/20 hover:bg-white hover:text-black text-brand-text font-montserrat font-bold text-sm tracking-wider uppercase px-10 py-4.5 rounded-full text-center transition-all duration-300 backdrop-blur-md">
+              View Menu
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Featured Premium Card -->
+        <div class="lg:col-span-5 flex justify-center reveal-on-scroll active delay-200">
+          <div class="w-full max-w-sm bg-brand-card rounded-2xl sm:rounded-[32px] p-6 sm:p-8 border border-white/10 shadow-2xl scale-hover relative group">
+            
+            <!-- Most Popular Badge -->
+            <div class="absolute top-4 left-4 z-20 bg-brand-primary text-white text-[10px] font-montserrat font-extrabold uppercase px-3 py-1 rounded-full shadow-[0_0_15px_rgba(255,77,45,0.4)]">
+              ⭐ MOST POPULAR
+            </div>
+
+            <!-- Heart icon overlay -->
+            <button class="fav-btn absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 backdrop-blur-xl hover:bg-brand-primary border border-white/10 flex items-center justify-center transition-all duration-300 text-white hover:text-white" data-id="b2">
+              <i data-lucide="heart" style="width:16px;height:16px;"></i>
+            </button>
+
+            <!-- Card Image -->
+            <div class="relative rounded-2xl overflow-hidden h-64 mb-6">
+              <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=600&auto=format&fit=crop" alt="The Highway Beast Burger" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" referrerPolicy="no-referrer">
+            </div>
+
+            <!-- Details -->
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-montserrat text-xs text-brand-secondary font-bold uppercase tracking-wider">Beef Signature</span>
+              <div class="flex items-center gap-1 text-brand-secondary font-bold text-xs font-montserrat">
+                <span>★</span>
+                <span>5.0</span>
+                <span class="text-brand-muted text-[10px] font-normal">(180+ Reviews)</span>
+              </div>
+            </div>
+
+            <h3 class="font-bebas text-2xl text-brand-text mb-1">
+              THE HIGHWAY BEAST
+            </h3>
+            
+            <p class="font-sans text-brand-muted text-xs font-light leading-relaxed mb-6">
+              Triple smashed beef patty, double turkey bacon, crispy onion rings, loaded cheddar, signature BBQ glaze.
+            </p>
+
+            <div class="flex items-center justify-between border-t border-brand-border/40 pt-4 mt-2">
+              <div>
+                <span class="text-[10px] text-brand-muted uppercase block tracking-wider font-montserrat font-bold">Price</span>
+                <span class="font-montserrat text-2xl font-black text-brand-primary">Rs. 1,150</span>
+              </div>
+
+              <!-- Quick Add Action -->
+              <button id="hero-feat-btn" class="bg-brand-primary hover:bg-brand-accent text-white font-montserrat font-bold text-xs uppercase px-6 py-3.5 rounded-full flex items-center gap-2 transition-all duration-300 shadow-[0_0_15px_rgba(255,77,45,0.4)]">
+                <i data-lucide="shopping-cart" style="width:14px;height:14px;"></i> Add To Cart
+              </button>
+            </div>
+
+            <!-- Delivery Time info footer overlay -->
+            <div class="flex items-center gap-4 mt-6 bg-black/40 backdrop-blur-md border border-white/5 rounded-2xl p-3 text-center justify-around shadow-xl">
+              <div class="flex items-center gap-1.5">
+                <i data-lucide="clock" class="text-brand-secondary" style="width:14px;height:14px;"></i>
+                <span class="text-[10px] font-montserrat text-brand-text font-bold uppercase">20 MINS</span>
+              </div>
+              <div class="h-4 w-[1px] bg-brand-border/30"></div>
+              <div class="flex items-center gap-1.5">
+                <i data-lucide="truck" class="text-brand-primary" style="width:14px;height:14px;"></i>
+                <span class="text-[10px] font-montserrat text-brand-text font-bold uppercase">FREE SHIPPING</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+
+    <!-- 3. FEATURED CATEGORIES -->
+    <section id="categories" class="py-16 relative bg-brand-bg z-10">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-12 reveal-on-scroll">
+          <h2 class="font-bebas text-5xl tracking-wide text-brand-text mb-2">EXPLORE OUR TASTE SECTIONS</h2>
+          <div class="h-1 w-12 bg-brand-primary mx-auto rounded-full"></div>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+          
+          <!-- Burger -->
+          <a href="#menu" class="group bg-brand-card border border-white/10 rounded-2xl sm:rounded-[24px] p-4 sm:p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:border-brand-primary hover:shadow-[0_0_20px_rgba(255,77,45,0.2)] flex flex-col items-center justify-center relative overflow-hidden">
+            <div class="absolute -top-6 -right-6 w-20 h-20 bg-brand-primary/10 rounded-full group-hover:scale-150 transition-all duration-500"></div>
+            <span class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🍔</span>
+            <h3 class="font-montserrat font-bold text-sm tracking-wider uppercase text-brand-text group-hover:text-brand-primary transition-colors">Burgers</h3>
+            <span class="text-[10px] text-brand-muted mt-1 uppercase font-semibold">12 items</span>
+          </a>
+
+          <!-- Wraps -->
+          <a href="#menu" class="group bg-brand-card border border-white/10 rounded-2xl sm:rounded-[24px] p-4 sm:p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:border-brand-primary hover:shadow-[0_0_20px_rgba(255,77,45,0.2)] flex flex-col items-center justify-center relative overflow-hidden">
+            <div class="absolute -top-6 -right-6 w-20 h-20 bg-brand-primary/10 rounded-full group-hover:scale-150 transition-all duration-500"></div>
+            <span class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🌯</span>
+            <h3 class="font-montserrat font-bold text-sm tracking-wider uppercase text-brand-text group-hover:text-brand-primary transition-colors">Wraps</h3>
+            <span class="text-[10px] text-brand-muted mt-1 uppercase font-semibold">6 items</span>
+          </a>
+
+          <!-- Fries -->
+          <a href="#menu" class="group bg-brand-card border border-white/10 rounded-2xl sm:rounded-[24px] p-4 sm:p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:border-brand-primary hover:shadow-[0_0_20px_rgba(255,77,45,0.2)] flex flex-col items-center justify-center relative overflow-hidden">
+            <div class="absolute -top-6 -right-6 w-20 h-20 bg-brand-primary/10 rounded-full group-hover:scale-150 transition-all duration-500"></div>
+            <span class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🍟</span>
+            <h3 class="font-montserrat font-bold text-sm tracking-wider uppercase text-brand-text group-hover:text-brand-primary transition-colors">Fries</h3>
+            <span class="text-[10px] text-brand-muted mt-1 uppercase font-semibold">8 items</span>
+          </a>
+
+          <!-- Drinks -->
+          <a href="#menu" class="group bg-brand-card border border-white/10 rounded-2xl sm:rounded-[24px] p-4 sm:p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:border-brand-primary hover:shadow-[0_0_20px_rgba(255,77,45,0.2)] flex flex-col items-center justify-center relative overflow-hidden">
+            <div class="absolute -top-6 -right-6 w-20 h-20 bg-brand-primary/10 rounded-full group-hover:scale-150 transition-all duration-500"></div>
+            <span class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🥤</span>
+            <h3 class="font-montserrat font-bold text-sm tracking-wider uppercase text-brand-text group-hover:text-brand-primary transition-colors">Drinks</h3>
+            <span class="text-[10px] text-brand-muted mt-1 uppercase font-semibold">5 items</span>
+          </a>
+
+          <!-- Fried Chicken -->
+          <a href="#menu" class="group bg-brand-card border border-white/10 rounded-2xl sm:rounded-[24px] p-4 sm:p-6 text-center col-span-2 sm:col-span-1 transition-all duration-300 hover:-translate-y-2 hover:border-brand-primary hover:shadow-[0_0_20px_rgba(255,77,45,0.2)] flex flex-col items-center justify-center relative overflow-hidden">
+            <div class="absolute -top-6 -right-6 w-20 h-20 bg-brand-primary/10 rounded-full group-hover:scale-150 transition-all duration-500"></div>
+            <span class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🍗</span>
+            <h3 class="font-montserrat font-bold text-sm tracking-wider uppercase text-brand-text group-hover:text-brand-primary transition-colors">Chicken</h3>
+            <span class="text-[10px] text-brand-muted mt-1 uppercase font-semibold">4 items</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 4. SIGNATURE MENU -->
+    <section id="menu" class="py-20 bg-brand-bg relative z-10 border-t border-brand-border/40">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 reveal-on-scroll">
+          <div>
+            <span class="font-montserrat text-xs text-brand-primary font-bold uppercase tracking-widest block mb-2">CURATED LEGENDARY FLAVORS</span>
+            <h2 class="font-bebas text-5xl sm:text-6xl tracking-wide text-brand-text">THE SIGNATURE MENU</h2>
+          </div>
+          <div class="h-1 w-20 bg-brand-primary hidden md:block"></div>
+        </div>
+
+        <!-- Menu Tabs Scroller -->
+        <div class="flex overflow-x-auto gap-3 pb-6 mb-8 scrollbar-hide select-none -mx-6 px-6">
+          <button data-category="burgers" class="menu-tab shrink-0 bg-brand-primary text-white font-montserrat font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full glow-primary transition-all duration-300 cursor-pointer">
+            🍔 Signature Beef
+          </button>
+          <button data-category="chicken" class="menu-tab shrink-0 bg-brand-card text-brand-text hover:border-brand-primary font-montserrat font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full border border-brand-border transition-all duration-300 cursor-pointer">
+            🍗 Chicken Burgers
+          </button>
+          <button data-category="fries" class="menu-tab shrink-0 bg-brand-card text-brand-text hover:border-brand-primary font-montserrat font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full border border-brand-border transition-all duration-300 cursor-pointer">
+            🍟 Loaded Fries
+          </button>
+          <button data-category="wraps" class="menu-tab shrink-0 bg-brand-card text-brand-text hover:border-brand-primary font-montserrat font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full border border-brand-border transition-all duration-300 cursor-pointer">
+            🌯 Wraps
+          </button>
+          <button data-category="pizza" class="menu-tab shrink-0 bg-brand-card text-brand-text hover:border-brand-primary font-montserrat font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full border border-brand-border transition-all duration-300 cursor-pointer">
+            🍕 Pizza
+          </button>
+          <button data-category="drinks" class="menu-tab shrink-0 bg-brand-card text-brand-text hover:border-brand-primary font-montserrat font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full border border-brand-border transition-all duration-300 cursor-pointer">
+            🥤 Drinks
+          </button>
+          <button data-category="desserts" class="menu-tab shrink-0 bg-brand-card text-brand-text hover:border-brand-primary font-montserrat font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full border border-brand-border transition-all duration-300 cursor-pointer">
+            🍰 Desserts
+          </button>
+        </div>
+
+        <!-- Menu Product Grid -->
+        <div id="menu-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 min-h-[450px]">
+          <!-- Injected dynamically by /src/app.js -->
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 5. DEAL OF THE DAY -->
+    <section id="deals" class="py-20 relative bg-brand-bg z-10 border-t border-brand-border/40">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="bg-gradient-to-r from-brand-primary via-brand-accent to-[#B11E06] rounded-3xl overflow-hidden p-8 md:p-12 lg:p-16 relative shadow-2xl reveal-on-scroll">
+          
+          <!-- Background road tracks elements -->
+          <div class="absolute inset-0 opacity-10 bg-cover bg-center pointer-events-none" style="background-image: url('https://images.unsplash.com/photo-1549611016-3a70d82b5040?q=80&w=600&auto=format&fit=crop');"></div>
+
+          <!-- Decorative Glow element -->
+          <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-brand-secondary/30 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="grid lg:grid-cols-12 gap-8 items-center relative z-10">
+            
+            <!-- Left Info -->
+            <div class="lg:col-span-7 text-left text-white">
+              <span class="inline-block bg-white text-brand-primary text-[10px] font-montserrat font-black uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 shadow-md animate-pulse">
+                ⏳ LIMITED TIME ONLY
+              </span>
+              
+              <h2 class="font-bebas tracking-tighter text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-none mb-4 text-white uppercase">
+                ROUTE47 <span class="text-stroke-immersive">ULTIMATE</span> <br>
+                BURGER COMBO
+              </h2>
+
+              <p class="font-montserrat text-sm sm:text-base font-extrabold text-brand-secondary uppercase tracking-wider mb-4">
+                🍔 DOUBLE SMASH BURGER • 🍟 LOADED FRIES • 🥤 LARGE BREWED COLA
+              </p>
+
+              <p class="font-sans text-white/95 text-xs sm:text-sm font-light leading-relaxed max-w-lg mb-8">
+                The ultimate road-trip bundle. Two hand-smashed 100% prime beef patties layered in double cheddar cheese, served with a mountain of fresh cheddar-drenched fries, and our signature ice-cold cola. Grab it before the highway timer runs out!
+              </p>
+
+              <div class="flex flex-col sm:flex-row sm:items-center gap-6">
+                <!-- Prices -->
+                <div class="flex items-baseline gap-3">
+                  <span class="font-montserrat font-black text-4xl sm:text-5xl text-brand-secondary drop-shadow">Rs. 999</span>
+                  <span class="font-montserrat text-lg font-semibold text-white/60 line-through">Rs. 1,590</span>
+                </div>
+                
+                <!-- CTA -->
+                <button onclick="addToCart('b1'); addToCart('f1'); addToCart('d3');" class="bg-white hover:bg-brand-secondary text-brand-primary hover:text-brand-bg font-montserrat font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-full shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_35px_rgba(255,193,7,0.5)] transition-all duration-300">
+                  Claim Deal Instantly
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Countdown Timer -->
+            <div class="lg:col-span-5 flex flex-col items-center lg:items-end justify-center">
+              <div class="bg-[#171717] border border-white/10 p-6 md:p-8 rounded-[24px] w-full max-w-sm text-center shadow-2xl">
+                <p class="font-montserrat font-bold text-xs text-white tracking-widest uppercase mb-6">ROUTE47 MIDNIGHT RESET</p>
+                
+                <!-- Counters Row -->
+                <div class="grid grid-cols-3 gap-4 mb-6">
+                  <!-- Hours -->
+                  <div class="bg-black/40 border border-white/5 rounded-xl p-4">
+                    <span id="countdown-hours" class="block font-bebas text-4xl sm:text-5xl text-brand-primary glow-text-primary">00</span>
+                    <span class="text-[9px] font-montserrat text-brand-muted uppercase font-bold tracking-widest">Hrs</span>
+                  </div>
+
+                  <!-- Mins -->
+                  <div class="bg-black/40 border border-white/5 rounded-xl p-4">
+                    <span id="countdown-mins" class="block font-bebas text-4xl sm:text-5xl text-brand-secondary glow-text-secondary">00</span>
+                    <span class="text-[9px] font-montserrat text-brand-muted uppercase font-bold tracking-widest">Mins</span>
+                  </div>
+
+                  <!-- Secs -->
+                  <div class="bg-black/40 border border-white/5 rounded-xl p-4">
+                    <span id="countdown-secs" class="block font-bebas text-4xl sm:text-5xl text-brand-accent animate-pulse">00</span>
+                    <span class="text-[9px] font-montserrat text-brand-muted uppercase font-bold tracking-widest">Secs</span>
+                  </div>
+                </div>
+
+                <div class="text-[11px] font-sans text-white/70 italic flex items-center justify-center gap-2">
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+                  Deal resets every single night at 12:00 AM
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 6. ABOUT ROUTE47 -->
+    <section id="about" class="py-20 bg-brand-bg relative z-10 border-t border-brand-border/40 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+        
+        <!-- Left Counters -->
+        <div class="grid grid-cols-2 gap-6 order-2 lg:order-1 reveal-on-scroll">
+          
+          <!-- Box 1 -->
+          <div class="bg-brand-card border border-brand-border p-6 sm:p-8 rounded-2xl shadow-xl text-center flex flex-col justify-center items-center h-44 scale-hover relative overflow-hidden group">
+            <span class="absolute top-0 left-0 w-1 h-full bg-brand-primary transition-all duration-300 group-hover:w-full group-hover:opacity-5"></span>
+            <span class="font-bebas text-5xl sm:text-6xl text-brand-primary mb-1 counter-val glow-text-primary" data-target="2018">0</span>
+            <span class="font-montserrat text-xs sm:text-sm text-brand-text font-bold tracking-wider uppercase">Founded</span>
+          </div>
+
+          <!-- Box 2 -->
+          <div class="bg-brand-card border border-brand-border p-6 sm:p-8 rounded-2xl shadow-xl text-center flex flex-col justify-center items-center h-44 scale-hover relative overflow-hidden group">
+            <span class="absolute top-0 left-0 w-1 h-full bg-brand-secondary transition-all duration-300 group-hover:w-full group-hover:opacity-5"></span>
+            <span class="font-bebas text-5xl sm:text-6xl text-brand-secondary mb-1 counter-val glow-text-secondary" data-target="75" data-suffix="K+">0</span>
+            <span class="font-montserrat text-xs sm:text-sm text-brand-text font-bold tracking-wider uppercase">Customers</span>
+          </div>
+
+          <!-- Box 3 -->
+          <div class="bg-brand-card border border-brand-border p-6 sm:p-8 rounded-2xl shadow-xl text-center flex flex-col justify-center items-center h-44 scale-hover relative overflow-hidden group">
+            <span class="absolute top-0 left-0 w-1 h-full bg-brand-accent transition-all duration-300 group-hover:w-full group-hover:opacity-5"></span>
+            <span class="font-bebas text-5xl sm:text-6xl text-white mb-1 counter-val" data-target="4.9">0</span>
+            <span class="font-montserrat text-xs sm:text-sm text-brand-text font-bold tracking-wider uppercase">Rating</span>
+          </div>
+
+          <!-- Box 4 -->
+          <div class="bg-brand-card border border-brand-border p-6 sm:p-8 rounded-2xl shadow-xl text-center flex flex-col justify-center items-center h-44 scale-hover relative overflow-hidden group">
+            <span class="absolute top-0 left-0 w-1 h-full bg-brand-primary transition-all duration-300 group-hover:w-full group-hover:opacity-5"></span>
+            <span class="font-bebas text-5xl sm:text-6xl text-brand-primary mb-1 counter-val" data-target="15">0</span>
+            <span class="font-montserrat text-xs sm:text-sm text-brand-text font-bold tracking-wider uppercase">Cities Served</span>
+          </div>
+
+        </div>
+
+        <!-- Right Story -->
+        <div class="order-1 lg:order-2 text-left reveal-on-scroll delay-200">
+          <span class="font-montserrat text-xs text-brand-primary font-bold uppercase tracking-widest block mb-2">OUR HIGHWAY HISTORY</span>
+          <h2 class="font-bebas text-4xl sm:text-5xl lg:text-6xl tracking-wide text-brand-text mb-6">EVERY BITE IS <br>WORTH THE JOURNEY</h2>
+          <div class="h-1 w-16 bg-brand-primary mb-6"></div>
+          
+          <p class="font-sans text-brand-text text-sm sm:text-base leading-relaxed mb-6 font-medium">
+            Route47 is Pakistan's fastest-growing gourmet burger destination, engineered specifically for food enthusiasts who refuse to compromise on flavor, quality, and crunch.
+          </p>
+
+          <p class="font-sans text-brand-muted text-sm leading-relaxed mb-6 font-light">
+            Founded with a passion for roadside diners, street foods, and night highway road-tripping, our mission was simple: bypass the corporate fast-food freezer culture. We craft 100% prime certified halal beef ground fresh daily, smash it onto blisteringly hot cast-iron griddles to lock in caramelization, and cradle them inside pillow-soft baked brioche buns.
+          </p>
+
+          <p class="font-sans text-brand-muted text-sm leading-relaxed mb-8 font-light">
+            We are more than just a menu; we are an entire road-trip mood. From Lahore to Karachi and Islamabad, we represent the culinary freedom of the open road.
+          </p>
+
+          <a href="#menu" class="bg-brand-primary hover:bg-brand-accent text-white font-montserrat font-extrabold text-sm tracking-wider uppercase px-8 py-4 rounded-full shadow-lg transition-all duration-300 glow-primary inline-block">
+            Explore Route47 Story
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 7. WHY CHOOSE ROUTE47 -->
+    <section id="why" class="py-20 bg-brand-bg relative z-10 border-t border-brand-border/40">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-16 reveal-on-scroll">
+          <span class="font-montserrat text-xs text-brand-primary font-bold uppercase tracking-widest block mb-2">UNCOMPROMISING METRICS</span>
+          <h2 class="font-bebas text-4xl sm:text-5xl lg:text-6xl tracking-wide text-brand-text mb-2">WHY WE DOMINATE THE ROAD</h2>
+          <div class="h-1 w-12 bg-brand-primary mx-auto rounded-full"></div>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Card 1 -->
+          <div class="scale-hover bg-brand-card border border-brand-border p-8 rounded-2xl shadow-xl relative overflow-hidden group">
+            <div class="w-14 h-14 bg-brand-primary/10 rounded-full flex items-center justify-center text-brand-primary mb-6 transition-transform duration-500 group-hover:scale-110">
+              <i data-lucide="leaf" style="width:24px;height:24px;"></i>
+            </div>
+            <h3 class="font-montserrat font-bold text-lg text-brand-text mb-3">Fresh Ingredients</h3>
+            <p class="font-sans text-brand-muted text-xs sm:text-sm font-light leading-relaxed">
+              We never use frozen patties. Sourced daily from local organic farms: real cheddar, fresh-baked buns, and crisp hand-picked veggies.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="scale-hover bg-brand-card border border-brand-border p-8 rounded-2xl shadow-xl relative overflow-hidden group">
+            <div class="w-14 h-14 bg-brand-secondary/10 rounded-full flex items-center justify-center text-brand-secondary mb-6 transition-transform duration-500 group-hover:scale-110">
+              <i data-lucide="rocket" style="width:24px;height:24px;"></i>
+            </div>
+            <h3 class="font-montserrat font-bold text-lg text-brand-text mb-3">Fast Delivery</h3>
+            <p class="font-sans text-brand-muted text-xs sm:text-sm font-light leading-relaxed">
+              Our hyper-trained riders navigate city streets like highway drivers. Delivered piping-hot within 30 minutes in state-of-the-art thermo cases.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="scale-hover bg-brand-card border border-brand-border p-8 rounded-2xl shadow-xl relative overflow-hidden group">
+            <div class="w-14 h-14 bg-brand-accent/10 rounded-full flex items-center justify-center text-brand-accent mb-6 transition-transform duration-500 group-hover:scale-110">
+              <i data-lucide="shield-check" style="width:24px;height:24px;"></i>
+            </div>
+            <h3 class="font-montserrat font-bold text-lg text-brand-text mb-3">Certified Halal</h3>
+            <p class="font-sans text-brand-muted text-xs sm:text-sm font-light leading-relaxed">
+              100% Halal certified, premium grass-fed meat sourced responsibly from verified, hygienic pasture-based partners.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="scale-hover bg-brand-card border border-brand-border p-8 rounded-2xl shadow-xl relative overflow-hidden group">
+            <div class="w-14 h-14 bg-brand-primary/10 rounded-full flex items-center justify-center text-brand-primary mb-6 transition-transform duration-500 group-hover:scale-110">
+              <i data-lucide="award" style="width:24px;height:24px;"></i>
+            </div>
+            <h3 class="font-montserrat font-bold text-lg text-brand-text mb-3">Premium Taste</h3>
+            <p class="font-sans text-brand-muted text-xs sm:text-sm font-light leading-relaxed">
+              Formulated by award-winning chefs. Our signature secret sauces and crispy buttermilk ratios are completely unique to Route47.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 8. HOW ORDERING WORKS -->
+    <section id="roadmap" class="py-20 bg-brand-bg relative z-10 border-t border-brand-border/40 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-16 reveal-on-scroll">
+          <span class="font-montserrat text-xs text-brand-primary font-bold uppercase tracking-widest block mb-2">STEPS ON THE HIGHWAY</span>
+          <h2 class="font-bebas text-4xl sm:text-5xl lg:text-6xl tracking-wide text-brand-text mb-2">HOW THE ENGINE WORKS</h2>
+          <div class="h-1 w-12 bg-brand-primary mx-auto rounded-full"></div>
+        </div>
+
+        <!-- Road Pathway Grid -->
+        <div class="relative py-12">
+          
+          <!-- Animated Dashed Highway SVG Road Overlay -->
+          <div class="absolute top-[48px] left-0 w-full hidden lg:block z-0">
+            <svg class="w-full h-10" fill="none" viewBox="0 0 1200 40" preserveAspectRatio="none">
+              <line x1="50" y1="20" x2="1150" y2="20" stroke="#FF4D2D" stroke-width="4" stroke-dasharray="12, 8" class="road-line" />
+            </svg>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 relative z-10 text-center">
+            
+            <!-- Step 1 -->
+            <div class="flex flex-col items-center reveal-on-scroll">
+              <div class="w-24 h-24 bg-brand-card border-2 border-brand-primary hover:bg-brand-primary text-brand-text hover:text-white rounded-full flex items-center justify-center shadow-xl transition-all duration-300 mb-6 text-4xl">
+                🍔
+              </div>
+              <h3 class="font-montserrat font-bold text-base text-brand-text mb-2 uppercase tracking-wider">1. Choose Meal</h3>
+              <p class="font-sans text-brand-muted text-xs max-w-[200px] font-light leading-relaxed">
+                Scan our premium dynamic tabbed menu and load up your digital cart.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="flex flex-col items-center reveal-on-scroll delay-100">
+              <div class="w-24 h-24 bg-brand-card border-2 border-brand-secondary hover:bg-brand-secondary text-brand-text hover:text-brand-bg rounded-full flex items-center justify-center shadow-xl transition-all duration-300 mb-6 text-4xl">
+                📍
+              </div>
+              <h3 class="font-montserrat font-bold text-base text-brand-text mb-2 uppercase tracking-wider">2. Enter Address</h3>
+              <p class="font-sans text-brand-muted text-xs max-w-[200px] font-light leading-relaxed">
+                Add your details inside our fast-checkout modal. Direct WhatsApp integration.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="flex flex-col items-center reveal-on-scroll delay-200">
+              <div class="w-24 h-24 bg-brand-card border-2 border-brand-accent hover:bg-brand-accent text-brand-text hover:text-white rounded-full flex items-center justify-center shadow-xl transition-all duration-300 mb-6 text-4xl">
+                👨‍🍳
+              </div>
+              <h3 class="font-montserrat font-bold text-base text-brand-text mb-2 uppercase tracking-wider">3. Fresh Preparation</h3>
+              <p class="font-sans text-brand-muted text-xs max-w-[200px] font-light leading-relaxed">
+                Our kitchen chefs instantly grind and hand-press your gourmet meal.
+              </p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="flex flex-col items-center reveal-on-scroll delay-300">
+              <div class="w-24 h-24 bg-brand-card border-2 border-brand-primary hover:bg-brand-primary text-brand-text hover:text-white rounded-full flex items-center justify-center shadow-xl transition-all duration-300 mb-6 text-4xl">
+                🛵
+              </div>
+              <h3 class="font-montserrat font-bold text-base text-brand-text mb-2 uppercase tracking-wider">4. Fast Delivery</h3>
+              <p class="font-sans text-brand-muted text-xs max-w-[200px] font-light leading-relaxed">
+                A hyper-trained Rider races your food to your door within 30 minutes!
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 9. CUSTOMER REVIEWS (Luxury Carousel) -->
+    <section id="reviews" class="py-20 bg-brand-bg relative z-10 border-t border-brand-border/40">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-16 reveal-on-scroll">
+          <span class="font-montserrat text-xs text-brand-primary font-bold uppercase tracking-widest block mb-2">TESTIMONIALS OF THE ROAD</span>
+          <h2 class="font-bebas text-4xl sm:text-5xl lg:text-6xl tracking-wide text-brand-text mb-2">WHAT FOOD CRITICS SAY</h2>
+          <div class="h-1 w-12 bg-brand-primary mx-auto rounded-full"></div>
+        </div>
+
+        <!-- Slider Wrapper -->
+        <div class="max-w-3xl mx-auto relative h-[360px] md:h-[300px]" id="reviews-container">
+          <!-- Injected dynamically by /src/app.js -->
+        </div>
+
+        <!-- Dot Navigation -->
+        <div class="flex items-center justify-center gap-3 mt-8 select-none" id="carousel-dots">
+          <!-- Injected dynamically by /src/app.js -->
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 10. FOOD GALLERY (Masonry Layout) -->
+    <section id="gallery" class="py-20 bg-brand-bg relative z-10 border-t border-brand-border/40">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-16 reveal-on-scroll">
+          <span class="font-montserrat text-xs text-brand-primary font-bold uppercase tracking-widest block mb-2">ROAD-TRIP VISUALS</span>
+          <h2 class="font-bebas text-4xl sm:text-5xl lg:text-6xl tracking-wide text-brand-text mb-2">ROUTE47 GALLERY</h2>
+          <div class="h-1 w-12 bg-brand-primary mx-auto rounded-full"></div>
+        </div>
+
+        <!-- Responsive Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          
+          <!-- Img 1 -->
+          <div class="group relative rounded-2xl overflow-hidden h-40 xs:h-48 sm:h-56 md:h-64 border border-brand-border shadow-lg reveal-on-scroll">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=400&auto=format&fit=crop" alt="Route47 Smash Beef Burger" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" referrerPolicy="no-referrer">
+            <div class="absolute inset-0 bg-[#0B0B0B]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-left">
+              <span class="text-brand-primary font-montserrat text-[10px] font-extrabold uppercase tracking-widest mb-1">Burgers</span>
+              <h4 class="font-montserrat font-bold text-sm text-brand-text">Signature Double Smash</h4>
+            </div>
+          </div>
+
+          <!-- Img 2 -->
+          <div class="group relative rounded-2xl overflow-hidden h-40 xs:h-48 sm:h-56 md:h-64 border border-brand-border shadow-lg reveal-on-scroll">
+            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=400&auto=format&fit=crop" alt="Route47 Loaded Fries" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" referrerPolicy="no-referrer">
+            <div class="absolute inset-0 bg-[#0B0B0B]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-left">
+              <span class="text-brand-primary font-montserrat text-[10px] font-extrabold uppercase tracking-widest mb-1">Fries</span>
+              <h4 class="font-montserrat font-bold text-sm text-brand-text">Roadkill Loaded Fries</h4>
+            </div>
+          </div>
+
+          <!-- Img 3 -->
+          <div class="group relative rounded-2xl overflow-hidden h-40 xs:h-48 sm:h-56 md:h-64 border border-brand-border shadow-lg reveal-on-scroll">
+            <img src="https://images.unsplash.com/photo-1626700051175-6518c4793f4f?q=80&w=400&auto=format&fit=crop" alt="Texas Tornado Wrap" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" referrerPolicy="no-referrer">
+            <div class="absolute inset-0 bg-[#0B0B0B]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-left">
+              <span class="text-brand-primary font-montserrat text-[10px] font-extrabold uppercase tracking-widest mb-1">Wraps</span>
+              <h4 class="font-montserrat font-bold text-sm text-brand-text">Texas Tornado Chicken Wrap</h4>
+            </div>
+          </div>
+
+          <!-- Img 4 -->
+          <div class="group relative rounded-2xl overflow-hidden h-40 xs:h-48 sm:h-56 md:h-64 border border-brand-border shadow-lg reveal-on-scroll">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=400&auto=format&fit=crop" alt="Route47 Supreme Pizza" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" referrerPolicy="no-referrer">
+            <div class="absolute inset-0 bg-[#0B0B0B]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-left">
+              <span class="text-brand-primary font-montserrat text-[10px] font-extrabold uppercase tracking-widest mb-1">Pizza</span>
+              <h4 class="font-montserrat font-bold text-sm text-brand-text">Route47 Supreme Pizza</h4>
+            </div>
+          </div>
+
+          <!-- Img 5 -->
+          <div class="group relative rounded-2xl overflow-hidden h-40 xs:h-48 sm:h-56 md:h-64 border border-brand-border shadow-lg reveal-on-scroll">
+            <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?q=80&w=400&auto=format&fit=crop" alt="Chocolate Fudge Milkshake" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" referrerPolicy="no-referrer">
+            <div class="absolute inset-0 bg-[#0B0B0B]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-left">
+              <span class="text-brand-primary font-montserrat text-[10px] font-extrabold uppercase tracking-widest mb-1">Drinks</span>
+              <h4 class="font-montserrat font-bold text-sm text-brand-text">V8 Chocolate Engine Shake</h4>
+            </div>
+          </div>
+
+          <!-- Img 6 -->
+          <div class="group relative rounded-2xl overflow-hidden h-40 xs:h-48 sm:h-56 md:h-64 border border-brand-border shadow-lg reveal-on-scroll">
+            <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?q=80&w=400&auto=format&fit=crop" alt="Crispy Chicken Burger" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" referrerPolicy="no-referrer">
+            <div class="absolute inset-0 bg-[#0B0B0B]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-left">
+              <span class="text-brand-primary font-montserrat text-[10px] font-extrabold uppercase tracking-widest mb-1">Chicken</span>
+              <h4 class="font-montserrat font-bold text-sm text-brand-text">Firehouse Crispy Chicken</h4>
+            </div>
+          </div>
+
+          <!-- Img 7 -->
+          <div class="group relative rounded-2xl overflow-hidden h-40 xs:h-48 sm:h-56 md:h-64 border border-brand-border shadow-lg reveal-on-scroll">
+            <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=400&auto=format&fit=crop" alt="Warm Skillet Cookie Dessert" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" referrerPolicy="no-referrer">
+            <div class="absolute inset-0 bg-[#0B0B0B]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-left">
+              <span class="text-brand-primary font-montserrat text-[10px] font-extrabold uppercase tracking-widest mb-1">Desserts</span>
+              <h4 class="font-montserrat font-bold text-sm text-brand-text">Highway Skillet Cookie</h4>
+            </div>
+          </div>
+
+          <!-- Img 8 -->
+          <div class="group relative rounded-2xl overflow-hidden h-40 xs:h-48 sm:h-56 md:h-64 border border-brand-border shadow-lg reveal-on-scroll">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=400&auto=format&fit=crop" alt="Gourmet Smash Cheeseburger" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" referrerPolicy="no-referrer">
+            <div class="absolute inset-0 bg-[#0B0B0B]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-left">
+              <span class="text-brand-primary font-montserrat text-[10px] font-extrabold uppercase tracking-widest mb-1">Burgers</span>
+              <h4 class="font-montserrat font-bold text-sm text-brand-text">Grand Canyon Classic</h4>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 11. MOBILE APP CTA -->
+    <section id="app" class="py-20 relative bg-brand-bg z-10 border-t border-brand-border/40">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="bg-gradient-to-r from-brand-card via-[#1e1e1e] to-[#121212] border border-brand-border rounded-3xl overflow-hidden p-6 sm:p-8 md:p-12 lg:p-16 relative shadow-2xl reveal-on-scroll">
+          
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Details Left -->
+            <div class="text-left">
+              <span class="font-montserrat text-xs text-brand-primary font-bold uppercase tracking-widest block mb-2">ROUTE47 ON-THE-GO</span>
+              <h2 class="font-bebas text-4xl sm:text-5xl lg:text-6xl tracking-wide text-brand-text mb-4">ORDER ROUTE47 ANYWHERE</h2>
+              <p class="font-sans text-brand-muted text-sm leading-relaxed mb-8 max-w-md font-light">
+                Download the Route47 App today. Lock in exclusive app-only diner deals, save your premium addresses, and monitor your delivery driver live from the griddle to your doorstep.
+              </p>
+
+              <!-- Downloads Buttons -->
+              <div class="flex flex-col sm:flex-row gap-4">
+                
+                <!-- App store -->
+                <button class="app-download-btn inline-flex items-center gap-3 bg-[#0B0B0B] hover:bg-brand-primary border border-white/10 hover:border-brand-primary text-white rounded-xl px-6 py-3.5 transition-all duration-300 shadow-lg cursor-pointer text-left">
+                  <i data-lucide="apple" class="w-6 h-6 shrink-0"></i>
+                  <div>
+                    <span class="text-[10px] text-brand-muted uppercase block leading-none">Download on the</span>
+                    <span class="font-montserrat font-bold text-sm leading-none">App Store</span>
+                  </div>
+                </button>
+
+                <!-- Play store -->
+                <button class="app-download-btn inline-flex items-center gap-3 bg-[#0B0B0B] hover:bg-brand-primary border border-white/10 hover:border-brand-primary text-white rounded-xl px-6 py-3.5 transition-all duration-300 shadow-lg cursor-pointer text-left">
+                  <i data-lucide="play" class="w-6 h-6 shrink-0 text-brand-secondary"></i>
+                  <div>
+                    <span class="text-[10px] text-brand-muted uppercase block leading-none">Get it on</span>
+                    <span class="font-montserrat font-bold text-sm leading-none">Google Play</span>
+                  </div>
+                </button>
+
+              </div>
+            </div>
+
+            <!-- Image Mockup Right -->
+            <div class="flex justify-center relative select-none">
+              <!-- Glow back drop -->
+              <div class="absolute w-72 h-72 bg-brand-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+              
+              <!-- Hand phone mockup frame simulator -->
+              <div class="w-64 h-[440px] bg-brand-bg rounded-[32px] border-4 border-neutral-700 relative overflow-hidden shadow-2xl relative p-4 flex flex-col justify-between">
+                <!-- Inner header notch -->
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-4 bg-neutral-700 rounded-b-xl z-20"></div>
+                
+                <div class="mt-4 flex flex-col gap-2 relative z-10 text-left">
+                  <!-- App logo -->
+                  <div class="text-sm font-bebas text-brand-primary font-bold tracking-wider mb-2">🔥 ROUTE47 MOBILE</div>
+                  
+                  <div class="w-full h-24 bg-brand-card border border-brand-border rounded-xl p-2.5 flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=200&auto=format&fit=crop" class="w-12 h-12 object-cover rounded-lg" loading="lazy" referrerPolicy="no-referrer">
+                    <div>
+                      <h4 class="font-montserrat text-[10px] font-bold text-brand-text leading-tight">Double Smash Combo</h4>
+                      <p class="text-[9px] text-brand-muted leading-tight mt-0.5">Rs. 999 <span class="line-through">Rs. 1,590</span></p>
+                      <span class="text-[8px] bg-brand-primary/20 text-brand-primary px-1.5 py-0.5 rounded-full mt-1 inline-block font-bold">LOCKED</span>
+                    </div>
+                  </div>
+
+                  <div class="w-full h-24 bg-brand-card border border-brand-border rounded-xl p-2.5 flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=200&auto=format&fit=crop" class="w-12 h-12 object-cover rounded-lg" loading="lazy" referrerPolicy="no-referrer">
+                    <div>
+                      <h4 class="font-montserrat text-[10px] font-bold text-brand-text leading-tight">Roadkill Loaded Fries</h4>
+                      <p class="text-[9px] text-brand-muted leading-tight mt-0.5">Rs. 650</p>
+                      <span class="text-[8px] bg-emerald-500/20 text-emerald-500 px-1.5 py-0.5 rounded-full mt-1 inline-block font-bold">READY</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-brand-primary text-center py-2.5 rounded-full text-[10px] font-montserrat font-extrabold uppercase text-white shadow-lg cursor-pointer">
+                  Place Mobile Order
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 12. CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-brand-bg relative z-10 border-t border-brand-border/40">
+      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start">
+        
+        <!-- Left details -->
+        <div class="text-left reveal-on-scroll">
+          <span class="font-montserrat text-xs text-brand-primary font-bold uppercase tracking-widest block mb-2">LOCATIONS & INQUIRIES</span>
+          <h2 class="font-bebas text-4xl sm:text-5xl lg:text-6xl tracking-wide text-brand-text mb-6">GRAB YOUR ROUTE</h2>
+          <div class="h-1 w-16 bg-brand-primary mb-8"></div>
+
+          <!-- Cards details -->
+          <div class="space-y-6 mb-8">
+            
+            <!-- Address -->
+            <div class="flex items-start gap-4 p-5 bg-brand-card/50 border border-brand-border rounded-2xl">
+              <div class="w-10 h-10 rounded-full bg-brand-primary/10 flex items-center justify-center text-brand-primary shrink-0">
+                <i data-lucide="map-pin" style="width:18px;height:18px;"></i>
+              </div>
+              <div>
+                <h4 class="font-montserrat font-bold text-sm text-brand-text mb-1 uppercase tracking-wider">Highway Flagship Diner</h4>
+                <p class="font-sans text-brand-muted text-xs sm:text-sm font-light leading-relaxed">
+                  47-Highway Commercial Center, Phase 6 DHA, Lahore, Pakistan
+                </p>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="flex items-start gap-4 p-5 bg-brand-card/50 border border-brand-border rounded-2xl">
+              <div class="w-10 h-10 rounded-full bg-brand-secondary/10 flex items-center justify-center text-brand-secondary shrink-0">
+                <i data-lucide="phone" style="width:18px;height:18px;"></i>
+              </div>
+              <div>
+                <h4 class="font-montserrat font-bold text-sm text-brand-text mb-1 uppercase tracking-wider">Diner Hotline</h4>
+                <p class="font-sans text-brand-muted text-xs sm:text-sm font-semibold">
+                  +92 42 111-47-47-47 <span class="text-[11px] font-normal text-brand-muted/80 block mt-0.5">Mobile: +92 300 1234567</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Hours -->
+            <div class="flex items-start gap-4 p-5 bg-brand-card/50 border border-brand-border rounded-2xl">
+              <div class="w-10 h-10 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent shrink-0">
+                <i data-lucide="clock-4" style="width:18px;height:18px;"></i>
+              </div>
+              <div>
+                <h4 class="font-montserrat font-bold text-sm text-brand-text mb-1 uppercase tracking-wider">Opening Hours</h4>
+                <p class="font-sans text-brand-muted text-xs sm:text-sm font-light leading-relaxed">
+                  Daily: 12:00 PM – 4:00 AM <span class="text-brand-primary font-semibold block mt-1 text-[11px]">Last griddle order at 3:45 AM</span>
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- WhatsApp button -->
+          <button id="contact-wa-btn" class="bg-emerald-600 hover:bg-emerald-700 text-white font-montserrat font-extrabold text-sm tracking-wider uppercase px-8 py-4 rounded-full flex items-center justify-center gap-2 shadow-lg transition-all duration-300 cursor-pointer w-full sm:w-auto">
+            <i data-lucide="message-circle" class="fill-white" style="width:18px;height:18px;"></i> Chat and Order via WhatsApp
+          </button>
+        </div>
+
+        <!-- Right Cyber Map Placeholder -->
+        <div class="h-96 w-full glass border border-brand-border rounded-2xl overflow-hidden relative shadow-2xl reveal-on-scroll delay-200">
+          <!-- Cyber style map illustration -->
+          <div class="absolute inset-0 bg-cover bg-center opacity-40 scale-105 filter invert" style="background-image: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=800&auto=format&fit=crop');"></div>
+          
+          <!-- Dark Cyber Grid Layer Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-b from-[#0B0B0B]/70 to-[#0B0B0B]/90 z-10 flex flex-col items-center justify-center p-6 text-center">
+            
+            <!-- Map marker item -->
+            <div class="relative mb-6 z-20 flex flex-col items-center">
+              <div class="w-12 h-12 bg-brand-primary rounded-full flex items-center justify-center text-white shadow-xl glow-primary animate-bounce">
+                <i data-lucide="map-pin" style="width:20px;height:20px;"></i>
+              </div>
+              <div class="h-6 w-[2px] bg-brand-primary"></div>
+              <div class="bg-brand-card border border-brand-border py-1.5 px-4 rounded-lg font-montserrat font-bold text-xs text-brand-text tracking-wide shadow-2xl">
+                ROUTE47 LAHORE
+              </div>
+            </div>
+
+            <p class="font-montserrat font-bold text-sm tracking-wider text-brand-text uppercase mb-1 z-20">FLAGSHIP INTERACTIVE HIGHWAY DINER</p>
+            <p class="font-sans text-xs text-brand-muted max-w-sm font-light z-20 mb-4">Phase 6 DHA, Lahore (Opposite Commercial Plaza Block Center)</p>
+            
+            <!-- Map redirection controls -->
+            <div class="flex items-center gap-3 z-20">
+              <a href="https://maps.google.com" target="_blank" class="bg-brand-primary hover:bg-brand-accent text-white font-montserrat font-extrabold text-[10px] tracking-wider uppercase px-5 py-2.5 rounded-full shadow-lg transition-colors">
+                Open in Google Maps
+              </a>
+              <div class="flex items-center gap-1.5 text-brand-secondary font-bold text-xs">
+                ★ 4.9 <span class="text-[9px] text-brand-muted font-normal">(7,200+ Reviews)</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 13. FOOTER -->
+    <footer class="bg-brand-card relative z-10 border-t border-brand-border/60 py-16 text-center sm:text-left">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-12">
+          
+          <!-- Column 1 Brand -->
+          <div class="flex flex-col items-center sm:items-start">
+            <span class="text-3xl font-bebas text-brand-primary glow-text-primary tracking-widest mb-4 inline-block">🔥 ROUTE47</span>
+            <p class="font-sans text-brand-muted text-xs leading-relaxed font-light mb-6">
+              Every Bite is Worth the Journey. Pakistan's ultimate gourmet fast food diner bringing road-trip energy directly to your home.
+            </p>
+            
+            <!-- Social Icons -->
+            <div class="flex items-center gap-3">
+              <a href="#" class="w-9 h-9 rounded-full bg-brand-bg/50 border border-brand-border flex items-center justify-center text-brand-muted hover:text-brand-primary hover:border-brand-primary transition-all duration-300">
+                <i data-lucide="instagram" style="width:16px;height:16px;"></i>
+              </a>
+              <a href="#" class="w-9 h-9 rounded-full bg-brand-bg/50 border border-brand-border flex items-center justify-center text-brand-muted hover:text-brand-primary hover:border-brand-primary transition-all duration-300">
+                <i data-lucide="facebook" style="width:16px;height:16px;"></i>
+              </a>
+              <a href="#" class="w-9 h-9 rounded-full bg-brand-bg/50 border border-brand-border flex items-center justify-center text-brand-muted hover:text-brand-primary hover:border-brand-primary transition-all duration-300">
+                <i data-lucide="twitter" style="width:16px;height:16px;"></i>
+              </a>
+              <a href="#" class="w-9 h-9 rounded-full bg-brand-bg/50 border border-brand-border flex items-center justify-center text-brand-muted hover:text-brand-primary hover:border-brand-primary transition-all duration-300">
+                <i data-lucide="youtube" style="width:16px;height:16px;"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2 Links -->
+          <div>
+            <h4 class="font-montserrat font-bold text-sm text-brand-text mb-4 uppercase tracking-wider">Quick Links</h4>
+            <ul class="space-y-2.5 font-sans text-brand-muted text-xs font-light">
+              <li><a href="#hero" class="hover:text-brand-primary transition-colors">Diner Home</a></li>
+              <li><a href="#about" class="hover:text-brand-primary transition-colors">Our Highway Story</a></li>
+              <li><a href="#deals" class="hover:text-brand-primary transition-colors">Midnight Hot Deals</a></li>
+              <li><a href="#roadmap" class="hover:text-brand-primary transition-colors">How We Order</a></li>
+              <li><a href="#reviews" class="hover:text-brand-primary transition-colors">Critic Reviews</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3 Links -->
+          <div>
+            <h4 class="font-montserrat font-bold text-sm text-brand-text mb-4 uppercase tracking-wider">Menu links</h4>
+            <ul class="space-y-2.5 font-sans text-brand-muted text-xs font-light">
+              <li><a href="#menu" class="hover:text-brand-primary transition-colors">Double Smash Beef</a></li>
+              <li><a href="#menu" class="hover:text-brand-primary transition-colors">Firehouse Crispy Chicken</a></li>
+              <li><a href="#menu" class="hover:text-brand-primary transition-colors">Roadkill Loaded Fries</a></li>
+              <li><a href="#menu" class="hover:text-brand-primary transition-colors">Texas Tornado Wraps</a></li>
+              <li><a href="#menu" class="hover:text-brand-primary transition-colors">Fuego Honey Pizzas</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4 Newsletter -->
+          <div class="flex flex-col items-center sm:items-start">
+            <h4 class="font-montserrat font-bold text-sm text-brand-text mb-4 uppercase tracking-wider">Highway Dispatch</h4>
+            <p class="font-sans text-brand-muted text-xs leading-relaxed font-light mb-4">
+              Get premium discount codes, secret recipes, and diner coupons directly in your mailbox.
+            </p>
+            <form class="subscribe-form flex w-full max-w-sm rounded-full overflow-hidden border border-brand-border bg-brand-bg">
+              <input type="email" placeholder="Your Email Address" required class="flex-grow bg-transparent px-4 py-3 text-xs text-brand-text outline-none focus:placeholder-transparent">
+              <button type="submit" class="bg-brand-primary hover:bg-brand-accent text-white font-montserrat font-black text-[10px] uppercase tracking-wider px-5 py-3 cursor-pointer transition-colors shrink-0">
+                Subscribe
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+        <div class="border-t border-brand-border/30 pt-8 flex flex-col md:flex-row items-center justify-between text-brand-muted text-xs font-light font-sans gap-4">
+          <p>© 2025 Route47. All Rights Reserved.</p>
+          <p class="flex items-center gap-1.5 font-semibold">
+            <span>Powered by Route47 Diner</span>
+            <span class="text-brand-primary">•</span>
+            <span>Halal Certified</span>
+          </p>
+        </div>
+
+      </div>
+    </footer>
+
+
+    <!-- 14. SHOPPING CART SLIDE-OUT DRAWER -->
+    <div id="cart-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 hidden transition-opacity duration-300"></div>
+    <div id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-brand-card/95 border-l border-brand-border z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col">
+      
+      <!-- Drawer Header -->
+      <div class="p-6 border-b border-brand-border flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="shopping-cart" class="text-brand-primary" style="width:20px;height:20px;"></i>
+          <h3 class="font-montserrat font-bold text-lg text-brand-text">Your Diner Bag</h3>
+        </div>
+        <button id="close-cart-btn" class="w-10 h-10 rounded-full bg-brand-bg hover:bg-brand-primary border border-brand-border flex items-center justify-center text-brand-muted hover:text-white transition-colors cursor-pointer">
+          <i data-lucide="x" style="width:16px;height:16px;"></i>
+        </button>
+      </div>
+
+      <!-- Drawer Content Scrollable -->
+      <div id="cart-items" class="flex-grow overflow-y-auto p-6 scrollbar-hide">
+        <!-- Loaded dynamically by /src/app.js -->
+      </div>
+
+      <!-- Drawer Footer -->
+      <div class="p-6 border-t border-brand-border bg-brand-bg/60 backdrop-blur-md">
+        <div class="flex items-center justify-between mb-5">
+          <span class="font-montserrat font-bold text-sm text-brand-muted uppercase tracking-wider">Subtotal</span>
+          <span id="cart-subtotal" class="font-montserrat font-black text-2xl text-brand-primary">Rs. 0</span>
+        </div>
+        
+        <p class="text-[10px] text-brand-muted font-sans text-center mb-5 italic font-light leading-relaxed">
+          Standard Rs. 47 highway shipping will be calculated during delivery verification.
+        </p>
+
+        <button id="checkout-btn" class="bg-brand-primary hover:bg-brand-accent text-white font-montserrat font-black text-sm tracking-widest uppercase py-4 rounded-full shadow-xl transition-all duration-300 w-full glow-primary cursor-pointer flex items-center justify-center gap-2">
+          <i data-lucide="shield-check" style="width:16px;height:16px;"></i> Proceed to Checkout
+        </button>
+      </div>
+
+    </div>
+
+
+    <!-- 15. CHECKOUT DIALOG MODAL -->
+    <div id="checkout-modal" class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+      <div class="bg-brand-card border border-brand-border rounded-3xl p-6 sm:p-8 w-full max-w-lg relative shadow-2xl reveal-on-scroll active">
+        
+        <button id="close-checkout-btn" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-brand-bg hover:bg-brand-primary border border-brand-border flex items-center justify-center text-brand-muted hover:text-white cursor-pointer">
+          <i data-lucide="x" style="width:16px;height:16px;"></i>
+        </button>
+
+        <div class="text-left mb-6">
+          <span class="font-montserrat text-[10px] text-brand-primary font-bold uppercase tracking-widest block mb-1">SECURE VERIFICATION</span>
+          <h3 class="font-bebas text-3xl sm:text-4xl text-brand-text tracking-wider">ROUTE47 CHECKOUT ENGINE</h3>
+          <div class="h-1 w-12 bg-brand-primary mt-2"></div>
+        </div>
+
+        <form id="checkout-form" class="space-y-4 text-left">
+          
+          <div>
+            <label class="block font-montserrat font-bold text-xs uppercase text-brand-muted tracking-wider mb-1.5">Full Name</label>
+            <input type="text" id="checkout-name" required placeholder="Ayesha Khan" class="w-full bg-brand-bg border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text outline-none focus:border-brand-primary">
+          </div>
+
+          <div>
+            <label class="block font-montserrat font-bold text-xs uppercase text-brand-muted tracking-wider mb-1.5">Contact Phone Number</label>
+            <input type="tel" id="checkout-phone" required placeholder="+92 300 1234567" class="w-full bg-brand-bg border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text outline-none focus:border-brand-primary">
+          </div>
+
+          <div>
+            <label class="block font-montserrat font-bold text-xs uppercase text-brand-muted tracking-wider mb-1.5">Delivery Address</label>
+            <textarea id="checkout-address" required rows="2" placeholder="House #47, Block Y, DHA Phase 6, Lahore" class="w-full bg-brand-bg border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text outline-none focus:border-brand-primary resize-none"></textarea>
+          </div>
+
+          <div>
+            <label class="block font-montserrat font-bold text-xs uppercase text-brand-muted tracking-wider mb-1.5">Rider Delivery Notes (Optional)</label>
+            <input type="text" id="checkout-notes" placeholder="Call upon arrival, leave on gate, etc." class="w-full bg-brand-bg border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text outline-none focus:border-brand-primary">
+          </div>
+
+          <!-- Payment methods options selector -->
+          <div>
+            <label class="block font-montserrat font-bold text-xs uppercase text-brand-muted tracking-wider mb-2">Payment Method</label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-montserrat text-xs font-semibold text-brand-text">
+              <label class="flex items-center gap-2 bg-brand-bg border border-brand-border rounded-xl p-3 cursor-pointer">
+                <input type="radio" name="payment" value="Cash On Delivery" checked class="accent-brand-primary">
+                <span>Cash On Delivery</span>
+              </label>
+              <label class="flex items-center gap-2 bg-brand-bg border border-brand-border rounded-xl p-3 cursor-pointer">
+                <input type="radio" name="payment" value="Card On Delivery" class="accent-brand-primary">
+                <span>Card On Delivery</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Price footer -->
+          <div class="border-t border-brand-border/40 pt-4 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] text-brand-muted uppercase block tracking-wider font-montserrat font-bold">Checkout Total</span>
+              <span id="checkout-total-price" class="font-montserrat text-2xl font-black text-brand-primary">Rs. 0</span>
+            </div>
+
+            <button type="submit" class="bg-brand-primary hover:bg-brand-accent text-white font-montserrat font-extrabold text-xs uppercase tracking-wider px-8 py-4 rounded-full shadow-xl transition-all duration-300 glow-primary cursor-pointer">
+              Place Diner Order
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+
+    <!-- 16. ORDER CONFIRMED VIEW SUCCESS POPUP -->
+    <div id="success-modal" class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+      <div class="bg-brand-card border border-brand-border rounded-3xl p-6 sm:p-8 w-full max-w-md text-center relative shadow-2xl">
+        
+        <div class="w-20 h-20 bg-brand-primary/10 rounded-full flex items-center justify-center text-brand-primary mx-auto mb-6 shadow-inner animate-pulse">
+          <i data-lucide="check-circle" style="width:36px;height:36px;"></i>
+        </div>
+
+        <h3 class="font-bebas text-3xl sm:text-4xl text-white tracking-wider mb-2">ORDER SUCCESSFULLY PLACED</h3>
+        <p class="font-montserrat text-xs text-brand-secondary uppercase font-bold tracking-widest mb-4">Route ID: <span id="success-order-id">R47-100234</span></p>
+        
+        <p class="font-sans text-brand-muted text-xs leading-relaxed max-w-sm mx-auto mb-6 font-light">
+          Your gourmet burger combo has reached our hot cast-iron griddle. Our kitchen team is starting preparation immediately.
+        </p>
+
+        <!-- Dynamic pre-filled WhatsApp direct order trigger -->
+        <div class="bg-[#0B0B0B] border border-brand-border rounded-2xl p-4 text-left mb-6">
+          <h4 class="font-montserrat text-xs font-bold text-brand-text mb-1 uppercase tracking-wide">📦 WHATSAPP DINER RADAR</h4>
+          <p class="text-[10px] text-brand-muted font-light leading-relaxed mb-3">
+            Pakistani food lovers: Click the button below to instantly link your order contents directly to our WhatsApp diner dashboard for live tracking updates!
+          </p>
+          <button id="success-wa-btn" class="bg-emerald-600 hover:bg-emerald-700 text-white font-montserrat font-extrabold text-[10px] tracking-wider uppercase py-2.5 rounded-full w-full flex items-center justify-center gap-1.5 cursor-pointer">
+            <i data-lucide="message-circle" class="fill-white" style="width:12px;height:12px;"></i> Connect To WhatsApp
+          </button>
+        </div>
+
+        <button id="close-success-btn" class="bg-brand-primary hover:bg-brand-accent text-white font-montserrat font-extrabold text-xs tracking-wider uppercase py-3.5 rounded-full w-full cursor-pointer transition-colors">
+          Return To Highway
+        </button>
+
+      </div>
+    </div>
+
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="back-to-top" class="fixed bottom-6 left-6 w-12 h-12 rounded-full bg-brand-card/90 hover:bg-brand-primary border border-brand-border hover:border-brand-primary flex items-center justify-center text-brand-muted hover:text-white transition-all duration-300 shadow-2xl hover:scale-105 opacity-0 translate-y-4 pointer-events-none z-30 cursor-pointer">
+      <i data-lucide="arrow-up" style="width:18px;height:18px;"></i>
+    </button>
+
+
+    <!-- Dynamic JavaScript file linked -->
+    <script type="module" src="/src/app.js"></script>
+
+  </body>
+</html>
